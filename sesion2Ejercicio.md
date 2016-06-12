@@ -11,7 +11,7 @@
 > hist(r)
 ```
 
-Gráfica 1
+![Hist1](https://github.com/jorgemaza/Entornos-de-Data-Science/blob/master/HistogramR.png)
 
 ```R
 > min(r)
@@ -51,7 +51,7 @@ El parámetro probability permite establecer el rango de la distribución normal
 
 El histograma cambia el eje Y de "frecuencia" a "densidad".
 
-Gráfica 2
+![Hist2](https://github.com/jorgemaza/Entornos-de-Data-Science/blob/master/HistogramRp.png)
 
 ```R
 > lines(s,d)
@@ -60,23 +60,5 @@ Gráfica 2
 Finalmente aparece superpuesta la línea y se puede apreciar la diferencia entre rnorm y dnorm con las diferencias entre valores aleatorios 
 y valores que cumplen perfectamente la distribución respectivamente.
 
-Gráfica 3
+![Hist3](https://github.com/jorgemaza/Entornos-de-Data-Science/blob/master/HistogramRSuperpuesto.png)
 
-
-
-> x <- hist(rnorm(10000), probability = TRUE)
-> summary(x)
-        Length Class  Mode     
-breaks   16     -none- numeric  
-counts   15     -none- numeric  
-density  15     -none- numeric  
-mids     15     -none- numeric  
-xname     1     -none- character
-equidist  1     -none- logical  
-> x <- rnorm(10000)
-> summary(x)
-    Min.   1st Qu.    Median      Mean   3rd Qu.      Max. 
--3.999000 -0.671800  0.016910  0.006859  0.699800  3.460000 
-> y<-dnorm(seq(-3.999000,3.460000, length.out = 10000), 0, 1,FALSE)
-> z<-seq(-3.999000,3.460000, length.out = 10000)
-> lines(z,y)
